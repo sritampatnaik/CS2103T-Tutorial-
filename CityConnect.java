@@ -315,9 +315,9 @@ public class CityConnect {
 						.equalsIgnoreCase(startLocation2));
 	}
 
-	private static boolean isPositive(String s) {
+	private static boolean isPositive(String distance) {
 		try {
-			int i = Integer.parseInt(s);
+			int i = Integer.parseInt(distance);
 			//return true if i is greater than 0
 			return (i > 0 ? true : false);
 		} catch (NumberFormatException nfe) {
