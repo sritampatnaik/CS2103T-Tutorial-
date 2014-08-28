@@ -290,11 +290,10 @@ public class CityConnect {
 			String existingStartLocation = route[i][STORAGE_POSITION_START_LOCATION];
 			String existingEndLocation = route[i][STORAGE_POSITION_END_LOCATION];
 
-			if (existingStartLocation == null) { // empty slot
+			if (existingStartLocation == null || sameRoute(existingStartLocation, existingEndLocation,
+					newStartLocation, newEndLocation) ) { // empty slot
 				return i;
-			} else if (sameRoute(existingStartLocation, existingEndLocation,
-					newStartLocation, newEndLocation)) {
-				return i;
+
 			}
 		}
 		return SLOT_UNAVAILABLE;
