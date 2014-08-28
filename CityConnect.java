@@ -163,6 +163,7 @@ public class CityConnect {
 	 * @param commandTypeString
 	 *            is the first word of the user command
 	 */
+	/* Hello */
 	private static CommandType determineCommandType(String commandTypeString) {
 		if (commandTypeString == null)
 			throw new Error("command type string cannot be null!");
